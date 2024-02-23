@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+(function (m, a, z, e) {
+  var s, t;
+  try {
+    t = m.sessionStorage.getItem('maze-us');
+  } catch (err) {}
+
+  if (!t) {
+    t = new Date().getTime();
+    try {
+      m.sessionStorage.setItem('maze-us', t);
+    } catch (err) {}
+  }
+
+  s = a.createElement('script');
+  s.src = z + '?apiKey=' + e;
+  s.async = true;
+  a.getElementsByTagName('head')[0].appendChild(s);
+  m.mazeUniversalSnippetApiKey = e;
+})(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '33fd76f8-cc5b-4eed-a05a-55080c7113a9');
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shopping Website</title>
+    <style>
+        /* Simple CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+        }
+        nav ul li a:hover {
+            background-color: #ddd;
+        }
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Simple Shopping Website</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section>
+    <h2>Welcome to our Shop!</h2>
+    <p>Buy high qality products from our site at low prices.</p>
+    <p>Here you can find our latest products:</p>
+    <ul>
+        <li>Product 1 - $10</li>
+        <li>Product 2 - $15</li>
+        <li>Product 3 - $20</li>
+    </ul>
+</section>
+
+</body>
+</html>
